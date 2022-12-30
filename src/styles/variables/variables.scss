@@ -4,6 +4,10 @@
     font-family: 'Avenir next';
     src: local('AvenirNext'), url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format('truetype');
 }
+@font-face {
+    font-family: 'Avenir next bold';
+    src: local('AvenirNext'), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format('truetype');
+}
 
 // Colors
 $bluePrimary: #213F7D;
@@ -14,7 +18,34 @@ $greenPrimary: #39CDCC;
 $workSans: 'Work Sans',
 sans-serif;
 $avenirNext: 'Avenir next', sans-serif;
+$avenirNextBold: 'Avenir next bold', sans-serif;
 
+// Breakpoints
+@mixin breakpointMobile {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin breakpointTablet {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin breakpointTabletLg {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin breakpointDesktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Primary button
 @mixin buttonStyle {
     background-color: $greenPrimary;
     color: #FFFFFF;
@@ -25,4 +56,5 @@ $avenirNext: 'Avenir next', sans-serif;
     font-family: $avenirNext;
     font-size: 14px;
     outline: none;
+    cursor: pointer;
 }

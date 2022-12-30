@@ -1,9 +1,25 @@
-import React from 'react'
+import LoginForm from '../components/login/LoginForm';
+import '../styles/login/login.css';
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+	return (
+		<section className="login">
+			<div className="login-div">
+				<section className="login-images">
+					<img src="/images/logo.svg" alt="logo" className="logo" />
+					<div>
+						<img src="/images/login-illus.svg" alt="illustration" />
+					</div>
+				</section>
 
-export default Login
+				<section className="login-form">
+					<img src="/images/logo.svg" alt="logo" className="logo" />
+
+					<LoginForm />
+				</section>
+			</div>
+		</section>
+	);
+};
+
+export default Login;

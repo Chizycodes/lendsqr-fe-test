@@ -2,4 +2,8 @@
 @font-face {
   font-family: "Avenir next";
   src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format("truetype");
+}
+@font-face {
+  font-family: "Avenir next bold";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
 }/*# sourceMappingURL=variables.css.map */
