@@ -6,6 +6,7 @@
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+    font-family: $workSans;
 }
 
 .top-nav {
@@ -25,6 +26,9 @@
 		height: 40px;
 		display: flex;
 		align-items: center;
+        @include breakpointDesktop {
+                display: none;
+        }
 		input {
 			@include input;
 			border-top-right-radius: 0px;
@@ -55,13 +59,30 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+    gap: 2rem;
 	color: $bluePrimary;
+    .logo {
+        width: 120px;
+    }
+    .menu-icon {
+        display: none;
+        @include breakpointDesktop {
+            display: block;
+            cursor: pointer;
+        }
+    }
 }
 
 .top-nav-right {
 	display: flex;
 	align-items: center;
 	gap: 2rem;
+    @include breakpointDesktop {
+            display: none;
+    }
+    a {
+        color: $bluePrimary;
+    }
 }
 
 .top-nav-profile {

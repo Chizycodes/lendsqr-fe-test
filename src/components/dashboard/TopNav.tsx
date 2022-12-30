@@ -25,6 +25,7 @@ const TopNav: FC<Props> = () => {
                             <img src="/images/icons/dropdown-icon.svg" alt="Avatar" />
                         </div>
                     </div>
+                    <img src="/images/icons/menu.svg" className='menu-icon' alt="menu icon" />
 				</div>
 			</div>
 		</div>
