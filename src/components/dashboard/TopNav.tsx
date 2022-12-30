@@ -29,11 +29,8 @@ const TopNav: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 						</div>
 					</div>
 					<div onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-icon">
-						{isMenuOpen ? (
-							<img src="/images/icons/close-icon.svg" alt="menu icon" />
-						) : (
-							<img src="/images/icons/menu.svg" alt="menu icon" />
-						)}
+							<img src={`/images/icons/${isMenuOpen ? "close-icon" : "menu"}.svg`} alt="menu icon" />
+						
 					</div>
 				</div>
 			</div>

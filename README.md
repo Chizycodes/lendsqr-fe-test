@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# LENDSQR FRONTEND ENGINEERING ASSESSMENT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
 
-## Available Scripts
+For development, you will only need Node.js installed on your environement.
+And please use the appropriate [Editorconfig](http://editorconfig.org/) plugin for your Editor (not mandatory).
 
-In the project directory, you can run:
+### Node
 
-### `npm start`
+[Node](http://nodejs.org/) is really easy to install & now include [NPM](https://npmjs.org/).
+You should be able to run the following command after the installation procedure
+below.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    $ node --version
+    v0.10.24
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    $ npm --version
+    1.3.21
 
-### `npm test`
+#### Node installation on OS X
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will need to use a Terminal. On OS X, you can find the default terminal in
+`/Applications/Utilities/Terminal.app`.
 
-### `npm run build`
+Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If everything when fine, you should run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    brew install node
 
-### `npm run eject`
+#### Node installation on Linux
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    sudo apt-get install python-software-properties
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Node installation on Windows
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Just go on [official Node.js website](http://nodejs.org/) & grab the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    $ git clone https://github.com/Chizycodes/lendsqr-fe-test.git
+    $ cd lendsqr-fe-test
+    $ npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Start & watch
+
+    $ npm start
+
+## Simple build for production
+
+    $ npm run build
+
+## Update sources
+
+Some packages usages might change so you should run `npm prune` & `npm install` often.
+A common way to update is by doing
+
+    $ git pull
+    $ npm prune
+    $ npm install
+
+To run those 3 commands you can just do
+
+    $ npm run pull
+
+### `post-merge` (≃ `npm install`)
+
+This hook will `npm prune && npm install` each time you `git pull` something if the `package.json` has been modified.
+
+### `pre-commit` (≃ `npm test`)
+
+This hook will just ensure you will commit something not broken bye pruning npm packages not in the `package.json` & eventually reinstall missings/not correctly removed packages.
+Then it will try a production build.
+
+---
+
+## Languages & tools
+
+### HTML
+
+-
+
+### JavaScript
+
+- [JSLint](http://www.jslint.com/docs/) is used to prevent JavaScript error.
+- [Browserify](http://browserify.org/) to handle allow us to write our client-side scripts with [es6 syntax](http://es6.github.io/) thanks to [es6ify](https://github.com/thlorenz/es6ify).
+- [React](http://facebook.github.io/react) is used for UI.
+
+### CSS
+
+- [SCSS](https://sass-lang.com/) is used to write futureproof CSS for CSS vendor prefix under the hood).
+
+_Autoprefixer_ is included and use [caniuse.com](http://caniuse.com/) database to avoid outdated prefixes. _You can forget CSS prefixes NOW._
