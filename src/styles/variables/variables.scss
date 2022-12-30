@@ -58,3 +58,14 @@ $avenirNextBold: 'Avenir next bold', sans-serif;
     outline: none;
     cursor: pointer;
 }
+
+@mixin 	input {
+	    width: 100%;
+	    height: 50px;
+	    border: 2px solid #545f7d26;
+	    border-radius: 5px;
+	    font-family: $avenirNext;
+	    font-size: 14px;
+	    color: $textPrimary;
+	    outline: none;
+}

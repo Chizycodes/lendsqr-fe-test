@@ -1,0 +1,76 @@
+@import '../variables/variables.scss';
+
+.dashboard-layout {
+	background-color: #e5e5e5;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.top-nav {
+	background-color: #ffffff;
+	height: 100px;
+	padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1030;
+	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
+	.search-input {
+		width: 400px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		input {
+			@include input;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border: 1px solid $bluePrimary;
+			height: 40px;
+			opacity: 0.5;
+			width: calc(100% - 56px);
+			height: 100%;
+			padding: 0px 12px;
+		}
+		button {
+			@include buttonStyle;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+			width: 56px;
+			background-color: $greenPrimary;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.top-nav-main {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	color: $bluePrimary;
+}
+
+.top-nav-right {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.top-nav-profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	img:first-child {
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+	}
+}
