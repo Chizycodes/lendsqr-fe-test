@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+@font-face {
+  font-family: "Avenir next";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format("truetype");
+}/*# sourceMappingURL=variables.css.map */
