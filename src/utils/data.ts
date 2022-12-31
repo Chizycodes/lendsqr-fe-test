@@ -8,7 +8,7 @@ export const navItems = [
 	{
 		title: 'Dashboard',
 		icon: '/images/icons/home.svg',
-		link: '#',
+		link: '/dashboard',
 		id: 2,
 	},
 	{
@@ -19,7 +19,7 @@ export const navItems = [
 	{
 		title: 'Users',
 		icon: '/images/icons/nav-icon-4.svg',
-		link: '/users',
+		link: '/dashboard/users',
 		id: 4,
 	},
 	{

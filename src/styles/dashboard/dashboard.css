@@ -125,6 +125,7 @@
 }
 
 .side-nav {
+  font-family: "Work Sans", sans-serif;
   background-color: #ffffff;
   height: 100%;
   width: 283px;
@@ -133,6 +134,8 @@
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: 5px;
 }
 @media (max-width: 1024px) {
   .side-nav {
@@ -157,26 +160,32 @@
   width: 125px;
 }
 .side-nav .side-nav-menu {
-  padding: 30px;
+  padding: 30px 0px;
+}
+.side-nav .side-nav-menu a {
+  color: #213F7D;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
 }
 .side-nav .side-nav-menu .side-nav-menu-item {
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  border-left: 4px solid transparent;
   cursor: pointer;
 }
 .side-nav .side-nav-menu .side-nav-menu-item.active {
-  background-color: #213F7D;
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: #ffffff;
+  background-color: rgba(57, 205, 205, 0.2196078431);
+  padding: 10px 30px;
+  border-left: 4px solid #39CDCC;
 }
-.side-nav .side-nav-menu .side-nav-menu-item.active svg {
-  fill: #ffffff;
-}
-.side-nav .side-nav-menu .side-nav-menu-item p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #213F7D;
+.side-nav .side-nav-menu .nav-item-header {
+  padding: 10px 30px;
+  color: #545F7D;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=dashboard.css.map */

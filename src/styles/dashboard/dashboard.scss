@@ -6,7 +6,7 @@
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-    font-family: $workSans;
+	font-family: $workSans;
 }
 
 .top-nav {
@@ -26,9 +26,9 @@
 		height: 40px;
 		display: flex;
 		align-items: center;
-        @include breakpointDesktop {
-                display: none;
-        }
+		@include breakpointDesktop {
+			display: none;
+		}
 		input {
 			@include input;
 			border-top-right-radius: 0px;
@@ -59,30 +59,30 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-    gap: 2rem;
+	gap: 2rem;
 	color: $bluePrimary;
-    .logo {
-        width: 120px;
-    }
-    .menu-icon {
-        display: none;
-        @include breakpointDesktop {
-            display: block;
-            cursor: pointer;
-        }
-    }
+	.logo {
+		width: 120px;
+	}
+	.menu-icon {
+		display: none;
+		@include breakpointDesktop {
+			display: block;
+			cursor: pointer;
+		}
+	}
 }
 
 .top-nav-right {
 	display: flex;
 	align-items: center;
 	gap: 2rem;
-    @include breakpointDesktop {
-            display: none;
-    }
-    a {
-        color: $bluePrimary;
-    }
+	@include breakpointDesktop {
+		display: none;
+	}
+	a {
+		color: $bluePrimary;
+	}
 }
 
 .top-nav-profile {
@@ -96,9 +96,9 @@
 	}
 }
 
-
 // Side Nav
 .side-nav {
+	font-family: $workSans;
 	background-color: #ffffff;
 	height: 100%;
 	width: 283px;
@@ -107,15 +107,17 @@
 	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 	overflow-y: auto;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scrollbar-width: 5px;
 	@include breakpointDesktop {
 		left: -300px;
 		z-index: 1030;
-		transition: all .5s;
-		-webkit-transition: all .5s;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
 		&.nav-active {
 			left: 0px;
-			transition: all .5s;
-			-webkit-transition: all .5s;
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
 		}
 	}
 	.side-nav-header {
@@ -126,31 +128,35 @@
 		img {
 			width: 125px;
 		}
-	
 	}
 	.side-nav-menu {
-		padding: 30px;
+		padding: 30px 0px;
+		a {
+			color: $bluePrimary;
+			font-size: 16px;
+			font-weight: 400;
+			text-decoration: none;
+		}
 		.side-nav-menu-item {
+			padding: 10px 30px;
 			display: flex;
 			align-items: center;
 			gap: 10px;
 			margin-bottom: 20px;
+			border-left: 4px solid transparent;
 			cursor: pointer;
 			&.active {
-				background-color: $bluePrimary;
-				border-radius: 10px;
-				padding: 10px 20px;
-				color: #ffffff;
-				svg {
-					fill: #ffffff;
-				}
+				background-color: #39cdcd38;
+				padding: 10px 30px;
+				border-left: 4px solid $greenPrimary;
 			}
-
-			p {
-				font-size: 16px;
-				font-weight: 400;
-				color: $bluePrimary;
-			}
+		}
+		.nav-item-header {
+			padding: 10px 30px;
+			color: $textPrimary;
+			font-weight: 500;
+			font-size: 14px;
+			text-transform: uppercase;
 		}
 	}
 }
