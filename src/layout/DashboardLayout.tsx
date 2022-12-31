@@ -4,7 +4,7 @@ import TopNav from '../components/dashboard/TopNav';
 import '../styles/dashboard/dashboard.css';
 
 interface Props {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 }
 
 const DashboardLayout: FC<Props> = ({ children }) => {

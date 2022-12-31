@@ -95,3 +95,62 @@
 		border-radius: 50%;
 	}
 }
+
+
+// Side Nav
+.side-nav {
+	background-color: #ffffff;
+	height: 100%;
+	width: 283px;
+	position: fixed;
+	z-index: 1020;
+	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+	overflow-y: auto;
+	overflow-x: hidden;
+	@include breakpointDesktop {
+		left: -300px;
+		z-index: 1030;
+		transition: all .5s;
+		-webkit-transition: all .5s;
+		&.nav-active {
+			left: 0px;
+			transition: all .5s;
+			-webkit-transition: all .5s;
+		}
+	}
+	.side-nav-header {
+		height: 100px;
+		padding-left: 35px;
+		display: flex;
+		align-items: center;
+		img {
+			width: 125px;
+		}
+	
+	}
+	.side-nav-menu {
+		padding: 30px;
+		.side-nav-menu-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 20px;
+			cursor: pointer;
+			&.active {
+				background-color: $bluePrimary;
+				border-radius: 10px;
+				padding: 10px 20px;
+				color: #ffffff;
+				svg {
+					fill: #ffffff;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				font-weight: 400;
+				color: $bluePrimary;
+			}
+		}
+	}
+}
