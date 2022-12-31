@@ -3,7 +3,6 @@
 ## Requirements
 
 For development, you will only need Node.js installed on your environement.
-And please use the appropriate [Editorconfig](http://editorconfig.org/) plugin for your Editor (not mandatory).
 
 ### Node
 
@@ -71,22 +70,11 @@ To run those 3 commands you can just do
 
     $ npm run pull
 
-### `post-merge` (≃ `npm install`)
-
-This hook will `npm prune && npm install` each time you `git pull` something if the `package.json` has been modified.
-
-### `pre-commit` (≃ `npm test`)
-
-This hook will just ensure you will commit something not broken bye pruning npm packages not in the `package.json` & eventually reinstall missings/not correctly removed packages.
-Then it will try a production build.
-
 ---
 
 ## Languages & tools
 
 ### HTML
-
--
 
 ### JavaScript
 
@@ -97,5 +85,3 @@ Then it will try a production build.
 ### CSS
 
 - [SCSS](https://sass-lang.com/) is used to write futureproof CSS for CSS vendor prefix under the hood).
-
-_Autoprefixer_ is included and use [caniuse.com](http://caniuse.com/) database to avoid outdated prefixes. _You can forget CSS prefixes NOW._
