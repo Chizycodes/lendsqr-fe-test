@@ -83,12 +83,12 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-                overflow: hidden;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
+				overflow: hidden;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
 				@include breakpointMobile {
 					width: 60px;
 					height: 60px;
@@ -167,7 +167,39 @@
 		border: 1px solid rgba(33, 63, 125, 0.06);
 		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 		border-radius: 4px;
-        padding: 30px;
-        margin-top: 30px;
+		padding: 30px;
+		margin-top: 30px;
+
+		.user-info-card {
+            border-bottom: 1px solid #21407d5a;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+			h2 {
+				color: $bluePrimary;
+				font-size: 16px;
+				font-weight: 500;
+				margin-bottom: 30px;
+			}
+            .user-info-main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                div {
+                    margin-right: 2%;
+                    min-width: 150px;
+                }
+            }
+			p {
+				color: $textPrimary;
+				&:first-child {
+					text-transform: uppercase;
+					font-size: 12px;
+                    margin-bottom: 8px;
+				}
+				&:last-child {
+					font-size: 16px;
+				}
+			}
+		}
 	}
 }

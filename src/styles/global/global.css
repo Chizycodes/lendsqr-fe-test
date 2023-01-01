@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+@font-face {
+  font-family: "Avenir next";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format("truetype");
+}
+@font-face {
+  font-family: "Avenir next bold";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.loader {
+  width: 100%;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=global.css.map */

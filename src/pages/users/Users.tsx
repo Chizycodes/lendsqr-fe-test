@@ -16,7 +16,6 @@ const Users = () => {
 	// Invoke when user click to request another page.
 	const handlePageClick = (event: any) => {
 		const newOffset = (event.selected * itemsPerPage) % users.length;
-		console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
 		setItemOffset(newOffset);
 	};
 
@@ -25,7 +24,6 @@ const Users = () => {
 		await axios
 			.get(`${process.env.REACT_APP_API_URL}/users`)
 			.then((response) => {
-				console.log(response.data, 'data');
 				setUsers(response.data);
 				setLoading(false);
 			})
