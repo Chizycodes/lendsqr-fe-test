@@ -8,7 +8,7 @@
   src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
 }
 .dashboard-layout {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -17,6 +17,8 @@
 .dashboard-layout .dashboard-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .dashboard-layout .dashboard-container {
@@ -26,7 +28,7 @@
 .dashboard-layout .dashboard-main {
   padding: 140px 40px 40px 40px;
   width: 100%;
-  max-width: 1130px;
+  max-width: 1200px;
   margin: 0px auto;
   overflow-y: auto;
 }

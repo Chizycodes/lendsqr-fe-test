@@ -24,7 +24,7 @@
   margin-bottom: 30px;
 }
 .users .users-stats-box {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
@@ -49,10 +49,76 @@
 }
 
 .users-table {
+  padding: 0px 30px;
   margin-top: 40px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
   width: 100%;
+  overflow-x: auto;
+}
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #545F7D;
+  overflow-x: auto;
+}
+.users-table table thead tr th {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: left;
+  min-width: 200px;
+}
+.users-table table thead tr th div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.users-table table thead tr th div img {
+  cursor: pointer;
+}
+.users-table table thead tr th:last-child {
+  min-width: 20px;
+}
+.users-table table tbody tr td {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px 0;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+
+.users-paginate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  color: #545F7D;
+  font-size: 14px;
+}
+.users-paginate .pagination {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.users-paginate .pagination .active {
+  color: #213F7D;
+  font-weight: 500;
+}
+.users-paginate .pagination .page-link {
+  cursor: pointer;
+}
+.users-paginate .pagination .arrow {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
 }/*# sourceMappingURL=users.css.map */
