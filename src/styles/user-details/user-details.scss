@@ -72,23 +72,29 @@
 			align-items: center;
 			gap: 30px;
 			margin-bottom: 50px;
-            @include breakpointMobile {
-                margin-bottom: 20px;
-            }
+			@include breakpointMobile {
+				margin-bottom: 20px;
+			}
 			.user-avatar {
 				width: 100px;
 				height: 100px;
-				border-radius: 50%;
+				border-radius: 100%;
 				background-color: #21407d58;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
 				@include breakpointMobile {
 					width: 60px;
 					height: 60px;
-                    img {
-                        width: 30px;
-                    }
+					img {
+						width: 30px;
+					}
 				}
 			}
 			div:first-child {
@@ -104,9 +110,9 @@
 				padding: 0 30px;
 				border-left: 1px solid #545f7d6d;
 				border-right: 1px solid #545f7d6d;
-                @include breakpointMobile {
-                    height: 70px;
-                }
+				@include breakpointMobile {
+					height: 70px;
+				}
 				p {
 					margin-bottom: 8px;
 				}
@@ -123,9 +129,9 @@
 					font-size: 22px;
 					font-weight: 700px;
 					margin-bottom: 8px;
-                    @include breakpointMobile {
-                        font-size: 16px;
-                    }
+					@include breakpointMobile {
+						font-size: 16px;
+					}
 				}
 				p:last-child {
 					font-size: 14px;
@@ -144,9 +150,9 @@
 				text-decoration: none;
 				font-size: 16px;
 				padding: 10px;
-                @include breakpointMobile {
-                    font-size: 14px;
-                }
+				@include breakpointMobile {
+					font-size: 14px;
+				}
 
 				&:first-child {
 					border-bottom: 3px solid $greenPrimary;
@@ -154,5 +160,14 @@
 				}
 			}
 		}
+	}
+
+	.user-details-main {
+		background-color: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.06);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+        padding: 30px;
+        margin-top: 30px;
 	}
 }

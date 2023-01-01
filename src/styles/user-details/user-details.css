@@ -114,11 +114,18 @@
 .user-details .user-header .user-header-info .user-avatar {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: rgba(33, 64, 125, 0.3450980392);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+.user-details .user-header .user-header-info .user-avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 599px) {
   .user-details .user-header .user-header-info .user-avatar {
@@ -195,4 +202,12 @@
 .user-details .user-header .user-header-nav a:first-child {
   border-bottom: 3px solid #39CDCC;
   color: #39CDCC;
+}
+.user-details .user-details-main {
+  background-color: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px;
+  margin-top: 30px;
 }/*# sourceMappingURL=user-details.css.map */

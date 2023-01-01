@@ -1,10 +1,36 @@
-import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { FC, useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import axios from 'axios';
 import UserDetailsHeader from '../../components/users/UserDetailsHeader';
-import "../../styles/user-details/user-details.css";
+import UserDetailsMain from '../../components/users/UserDetailsMain';
+import '../../styles/user-details/user-details.css';
 
 interface Props {}
+
 const UserDetail: FC<Props> = () => {
+	const [loading, setLoading] = useState<Boolean>();
+	const [user, setUser] = useState([]);
+	const { id } = useParams();
+
+	const fetchUser = async () => {
+		setLoading(true);
+		await axios
+			.get(`${process.env.REACT_APP_API_URL}/users/${id}`)
+			.then((response) => {
+				console.log(response.data, 'data');
+				setUser(response.data);
+				setLoading(false);
+			})
+			.catch((error) => {
+				const err = error.response.data;
+				console.log(err);
+				setLoading(false);
+			});
+	};
+
+	useEffect(() => {
+		fetchUser();
+	}, []);
 	return (
 		<section className="user-details">
 			<Link to="/dashboard/users" className="back">
@@ -18,7 +44,8 @@ const UserDetail: FC<Props> = () => {
 				</div>
 			</div>
 			<div>
-				<UserDetailsHeader />
+				<UserDetailsHeader user={user} />
+				<UserDetailsMain />
 			</div>
 		</section>
 	);

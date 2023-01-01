@@ -3,19 +3,21 @@ import { Link } from 'react-router-dom';
 
 const userNavItems: String[] = ['General Details', 'Documents', 'Bank Details', 'Loans', 'Savings', 'App and System'];
 
-interface Props {}
+interface Props {
+    user: any;
+}
 
-const UserDetailsHeader: FC<Props> = () => {
+const UserDetailsHeader: FC<Props> = ({user}) => {
 	return (
 		<div className="user-header">
 			<div className="user-header-info">
 				<div>
 					<div className="user-avatar">
-						<img src="/images/user-avatar.svg" alt="avatar" />
+						<img src={user?.profile?.avatar || '/images/user-avatar.svg'} alt="avatar" />
 					</div>
 					<div>
-						<p>Grace Effiom</p>
-						<p>LSQFf587g90</p>
+						<p>{`${user?.profile?.firstName} ${user?.profile?.lastName}`}</p>
+						<p>{user?.profile?.bvn}</p>
 					</div>
 				</div>
 
@@ -29,8 +31,8 @@ const UserDetailsHeader: FC<Props> = () => {
 				</div>
 
 				<div>
-					<p>₦200,000.00</p>
-					<p>9912345678/Providus Bank</p>
+					<p>₦{user?.accountBalance}</p>
+					<p>{user?.accountNumber}/Providus Bank</p>
 				</div>
 			</div>
 			<div className="user-header-nav">
