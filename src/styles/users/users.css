@@ -126,6 +126,13 @@
 .users-table table thead tr th:last-child {
   min-width: 20px;
 }
+.users-table table tbody tr .status.active {
+  padding: 6px 10px;
+  color: #39CD62;
+  background-color: rgba(57, 205, 99, 0.231372549);
+  border-radius: 100px;
+  font-size: 14px;
+}
 .users-table table tbody tr td {
   font-size: 14px;
   font-weight: 400;

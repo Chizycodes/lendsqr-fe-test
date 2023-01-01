@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { UserModel } from '../../utils/models';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import Loader from '../general/Loader';
 
 interface Props {
 	users: UserModel[];
@@ -41,7 +40,9 @@ const UsersTable: FC<Props> = ({ users, loading }) => {
 								<td>{user?.email}</td>
 								<td>{user?.phoneNumber}</td>
 								<td>{moment(user?.createdAt).format('MMM D, YYYY h:mm a')}</td>
-								<td>{user?.status}</td>
+								<td>
+									<span className="status active"> Active</span>
+								</td>
 								<td>
 									<img src="/images/icons/more-icon.svg" alt="more" />
 								</td>

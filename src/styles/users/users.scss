@@ -111,6 +111,13 @@
 		}
 		tbody {
 			tr {
+				.status.active {
+					padding: 6px 10px;
+					color: #39CD62;
+					background-color: #39cd633b;
+					border-radius: 100px;
+					font-size: 14px;
+				}
 				td {
 					font-size: 14px;
 					font-weight: 400;
@@ -122,6 +129,8 @@
                     @include breakpointMobile {
                             max-width: 150px;
                     }
+
+					
 				}
 				a {
 					color: $textPrimary;
