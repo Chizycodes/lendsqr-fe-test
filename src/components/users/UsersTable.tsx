@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
 import { UserModel } from '../../utils/models';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 interface Props {
 	users: UserModel[];
+	loading: Boolean;
 }
 
 const tableHeaders = ['Organization', 'Username', 'Email', 'Phone number', 'Date joined', 'Status', ''];
 
-const UsersTable: FC<Props> = ({ users }) => {
+const UsersTable: FC<Props> = ({ users, loading }) => {
 	return (
 		<div className="users-table">
 			<table>
@@ -29,17 +31,27 @@ const UsersTable: FC<Props> = ({ users }) => {
 				<tbody>
 					{users.map((user: any, index: number) => {
 						return (
-							<tr key={index}>
-								<td>{user?.orgName}</td>
-								<td>{user?.userName}</td>
-								<td>{user?.email}</td>
-								<td>{user?.phoneNumber}</td>
-								<td>{moment(user?.createdAt).format('MMM D, YYYY h:mm a')}</td>
-								<td>{user?.status}</td>
-								<td>
-									<img src="/images/icons/more-icon.svg" alt="more" />
-								</td>
-							</tr>
+							<>
+								{loading ? (
+									<div>
+										<img src="/images/loader.gif" alt="/loader" className='loader' />
+									</div>
+								) : (
+									<tr key={index}>
+										<td>
+											<Link to={`/dashboard/users/${user?.id}`}>{user?.orgName}</Link>
+										</td>
+										<td>{user?.userName}</td>
+										<td>{user?.email}</td>
+										<td>{user?.phoneNumber}</td>
+										<td>{moment(user?.createdAt).format('MMM D, YYYY h:mm a')}</td>
+										<td>{user?.status}</td>
+										<td>
+											<img src="/images/icons/more-icon.svg" alt="more" />
+										</td>
+									</tr>
+								)}
+							</>
 						);
 					})}
 				</tbody>

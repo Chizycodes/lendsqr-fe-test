@@ -15,7 +15,7 @@ function App() {
 				<Route path="/dashboard/*" element={<DashboardLayout />}>
 					<Route index element={<Users />} />
 					<Route index path="users" element={<Users />} />
-					<Route path="user/:id" element={<UserDetail />} />
+					<Route path="users/:id" element={<UserDetail />} />
 				</Route>
 
 				<Route path="*" element={<h1>PAGE NOT FOUND</h1>} />

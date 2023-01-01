@@ -6,7 +6,7 @@ import UsersTable from '../../components/users/UsersTable';
 import ReactPaginate from 'react-paginate';
 
 const Users = () => {
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState<Boolean>(false);
 	const [users, setUsers] = useState([]);
 	const [currentItems, setCurrentItems] = useState([]);
 	const [pageCount, setPageCount] = useState(0);
@@ -23,7 +23,7 @@ const Users = () => {
 	const fetchUsers = async () => {
 		setLoading(true);
 		await axios
-			.get('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
+			.get(`${process.env.REACT_APP_API_URL}/users`)
 			.then((response) => {
 				console.log(response.data, 'data');
 				setUsers(response.data);
@@ -51,7 +51,7 @@ const Users = () => {
 			<h1>Users</h1>
 			<div>
 				<UsersStats />
-				<UsersTable users={currentItems} />
+				<UsersTable users={currentItems} loading={loading} />
 				<div className="users-paginate">
 					<div className="user-page-info">
 						<p>

@@ -140,6 +140,13 @@
     max-width: 150px;
   }
 }
+.users-table table tbody tr a {
+  color: #545F7D;
+  text-decoration: none;
+}
+.users-table table tbody tr a:hover {
+  text-decoration: underline;
+}
 
 .users-paginate {
   display: flex;

@@ -123,6 +123,13 @@
                             max-width: 150px;
                     }
 				}
+				a {
+					color: $textPrimary;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 		}
 	}

@@ -1,0 +1,110 @@
+@import '../variables/variables.scss';
+
+.user-details {
+	color: $textPrimary;
+	font-family: $workSans;
+	.back {
+		font-size: 16px;
+		color: $textPrimary;
+		text-decoration: none;
+		cursor: pointer;
+		img {
+			margin-right: 10px;
+		}
+	}
+
+	.header-btns {
+		margin: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		h1 {
+			color: $bluePrimary;
+			font-size: 24px;
+			font-weight: 500;
+		}
+		button:first-child {
+			@include buttonStyle;
+			background-color: transparent;
+			color: #e4033b;
+			border: 1px solid #e4033b;
+			margin-right: 20px;
+			padding: 12px 16px;
+		}
+		button:last-child {
+			@include buttonStyle;
+			background-color: transparent;
+			color: $greenPrimary;
+			border: 1px solid $greenPrimary;
+			padding: 12px 16px;
+		}
+	}
+
+	.user-header {
+		background-color: #ffffff;
+		border: 1px solid rgba(33, 63, 125, 0.06);
+		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
+		padding: 30px 30px 0px 30px;
+
+		.user-header-info {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			margin-bottom: 30px;
+			.user-avatar {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				background-color: #21407d58;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			div:first-child {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				p:first-child {
+					color: $bluePrimary;
+					font-size: 22px;
+					font-weight: 700px;
+					margin-bottom: 8px;
+				}
+				p:last-child {
+					font-size: 14px;
+				}
+			}
+			.user-tier {
+				height: 100px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0 30px;
+				border-left: 1px solid #545f7d6d;
+				border-right: 1px solid #545f7d6d;
+				p {
+					margin-bottom: 8px;
+				}
+                .star-rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+			}
+
+			div:last-child {
+                color: $bluePrimary;
+                word-wrap: break-word;
+				p:first-child {
+					font-size: 22px;
+					font-weight: 700px;
+					margin-bottom: 8px;
+				}
+				p:last-child {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

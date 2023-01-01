@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+@font-face {
+  font-family: "Avenir next";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Regular.otf) format("truetype");
+}
+@font-face {
+  font-family: "Avenir next bold";
+  src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
+}
+.user-details {
+  color: #545F7D;
+  font-family: "Work Sans", sans-serif;
+}
+.user-details .back {
+  font-size: 16px;
+  color: #545F7D;
+  text-decoration: none;
+  cursor: pointer;
+}
+.user-details .back img {
+  margin-right: 10px;
+}
+.user-details .header-btns {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-details .header-btns h1 {
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+}
+.user-details .header-btns button:first-child {
+  background-color: #39CDCC;
+  color: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-family: "Avenir next", sans-serif;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #e4033b;
+  border: 1px solid #e4033b;
+  margin-right: 20px;
+  padding: 12px 16px;
+}
+.user-details .header-btns button:last-child {
+  background-color: #39CDCC;
+  color: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-family: "Avenir next", sans-serif;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #39CDCC;
+  border: 1px solid #39CDCC;
+  padding: 12px 16px;
+}
+.user-details .user-header {
+  background-color: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px 30px 0px 30px;
+}
+.user-details .user-header .user-header-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.user-details .user-header .user-header-info .user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(33, 64, 125, 0.3450980392);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-details .user-header .user-header-info div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-details .user-header .user-header-info div:first-child p:first-child {
+  color: #213F7D;
+  font-size: 22px;
+  font-weight: 700px;
+  margin-bottom: 8px;
+}
+.user-details .user-header .user-header-info div:first-child p:last-child {
+  font-size: 14px;
+}
+.user-details .user-header .user-header-info .user-tier {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  border-left: 1px solid rgba(84, 95, 125, 0.4274509804);
+  border-right: 1px solid rgba(84, 95, 125, 0.4274509804);
+}
+.user-details .user-header .user-header-info .user-tier p {
+  margin-bottom: 8px;
+}
+.user-details .user-header .user-header-info .user-tier .star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.user-details .user-header .user-header-info div:last-child {
+  color: #213F7D;
+  word-wrap: break-word;
+}
+.user-details .user-header .user-header-info div:last-child p:first-child {
+  font-size: 22px;
+  font-weight: 700px;
+  margin-bottom: 8px;
+}
+.user-details .user-header .user-header-info div:last-child p:last-child {
+  font-size: 14px;
+}/*# sourceMappingURL=user-details.css.map */
