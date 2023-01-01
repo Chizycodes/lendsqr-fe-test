@@ -1,1 +1,51 @@
 @import '../variables/variables.scss';
+
+.users {
+    font-family: $workSans;
+    h1 {
+        color: $bluePrimary;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .users-stats {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    .users-stats-box {
+        background-color: #FFFFFF;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        width: 240px;
+        padding: 20px 30px 30px;
+        gap: 12px;
+        img {
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            color: $textPrimary;
+            text-transform: uppercase;
+        }
+        p:last-child {
+            font-size: 24px;
+            font-weight: 600;
+            color: $bluePrimary;
+            margin-top: 12px;
+        }
+    }
+}
+
+.users-table {
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    width: 100%;
+}

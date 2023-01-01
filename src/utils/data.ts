@@ -147,3 +147,26 @@ export const navItems = [
 		id: 25,
 	},
 ];
+
+export const usersStats = [
+	{
+		title: 'Users',
+		icon: '/images/icons/user-stat-icon-1.svg',
+		count: '2,453',
+	},
+	{
+		title: 'Active Users',
+		icon: '/images/icons/user-stat-icon-2.svg',
+		count: '2,453',
+	},
+	{
+		title: 'Users with loans',
+		icon: '/images/icons/user-stat-icon-3.svg',
+		count: '12,453',
+	},
+	{
+		title: 'Users with savings',
+		icon: '/images/icons/user-stat-icon-4.svg',
+		count: '102,453',
+	},
+];

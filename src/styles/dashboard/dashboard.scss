@@ -1,11 +1,10 @@
 @import '../variables/variables.scss';
 
 .dashboard-layout {
-	background-color: #e5e5e5;
+	background-color: #FBFBFB;
 	height: 100vh;
 	width: 100%;
 	position: relative;
-	overflow: hidden;
 	font-family: $workSans;
 	.dashboard-container {
 		display: flex;
@@ -15,7 +14,11 @@
 		}
 	}
 	.dashboard-main {
-		padding: 100px 20px 20px 20px;
+		padding: 140px 40px 40px 40px;
+		width: 100%;
+		max-width: 1130px;
+		margin: 0px auto;
+		overflow-y: auto;
 	}
 }
 

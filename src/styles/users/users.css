@@ -6,4 +6,53 @@
 @font-face {
   font-family: "Avenir next bold";
   src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
+}
+.users {
+  font-family: "Work Sans", sans-serif;
+}
+.users h1 {
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.users .users-stats {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.users .users-stats-box {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  width: 240px;
+  padding: 20px 30px 30px;
+  gap: 12px;
+}
+.users .users-stats-box img {
+  margin-bottom: 12px;
+}
+.users .users-stats-box p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #545F7D;
+  text-transform: uppercase;
+}
+.users .users-stats-box p:last-child {
+  font-size: 24px;
+  font-weight: 600;
+  color: #213F7D;
+  margin-top: 12px;
+}
+
+.users-table {
+  margin-top: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  width: 100%;
 }/*# sourceMappingURL=users.css.map */

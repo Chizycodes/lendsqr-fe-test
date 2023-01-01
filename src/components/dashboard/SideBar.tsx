@@ -20,9 +20,9 @@ const SideBar: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 				<ul className="side-nav-menu">
 					{navItems.map((item, index) => {
 						return (
-							<>
+							<div key={item.id}>
 								{!item.header ? (
-									<Link key={item.id} to={`${item.link}`}>
+									<Link to={`${item.link}`}>
 										<li className={`side-nav-menu-item ${pathname === item.link && 'active'}`}>
 											{!item.header && <img src={item.icon} alt={item.title} />}
 
@@ -35,11 +35,11 @@ const SideBar: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 										</li>
 									</Link>
 								) : (
-									<li key={item.id} className="nav-item-header">
+									<li className="nav-item-header">
 										<span>{item.title}</span>
 									</li>
 								)}
-							</>
+							</div>
 						);
 					})}
 				</ul>
