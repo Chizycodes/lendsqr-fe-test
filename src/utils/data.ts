@@ -14,6 +14,7 @@ export const navItems = [
 	{
 		title: 'Customers',
 		header: true,
+		link: "",
 		id: 3,
 	},
 	{
@@ -67,6 +68,7 @@ export const navItems = [
 	{
 		title: 'Businesses',
 		header: true,
+		link: "",
 		id: 12,
 	},
 	{
@@ -126,6 +128,7 @@ export const navItems = [
     {
 		title: 'Settings',
 		header: true,
+		link: "",
 		id: 22,
 	},
     {
