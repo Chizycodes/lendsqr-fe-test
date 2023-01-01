@@ -8,6 +8,7 @@
   src: local("AvenirNext"), url(/public/avenir-next/AvenirNextLTPro-Bold.otf) format("truetype");
 }
 .user-details {
+  width: 100%;
   color: #545F7D;
   font-family: "Work Sans", sans-serif;
 }
@@ -21,15 +22,29 @@
   margin-right: 10px;
 }
 .user-details .header-btns {
+  width: 100%;
   margin: 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 599px) {
+  .user-details .header-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
 .user-details .header-btns h1 {
   color: #213F7D;
   font-size: 24px;
   font-weight: 500;
+}
+@media (max-width: 599px) {
+  .user-details .header-btns h1 {
+    font-size: 20px;
+  }
 }
 .user-details .header-btns button:first-child {
   background-color: #39CDCC;
@@ -48,6 +63,11 @@
   margin-right: 20px;
   padding: 12px 16px;
 }
+@media (max-width: 599px) {
+  .user-details .header-btns button:first-child {
+    font-size: 12px;
+  }
+}
 .user-details .header-btns button:last-child {
   background-color: #39CDCC;
   color: #FFFFFF;
@@ -64,7 +84,13 @@
   border: 1px solid #39CDCC;
   padding: 12px 16px;
 }
+@media (max-width: 599px) {
+  .user-details .header-btns button:last-child {
+    font-size: 12px;
+  }
+}
 .user-details .user-header {
+  overflow-x: auto;
   background-color: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
@@ -72,10 +98,18 @@
   padding: 30px 30px 0px 30px;
 }
 .user-details .user-header .user-header-info {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+@media (max-width: 599px) {
+  .user-details .user-header .user-header-info {
+    margin-bottom: 20px;
+  }
 }
 .user-details .user-header .user-header-info .user-avatar {
   width: 100px;
@@ -86,19 +120,19 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 599px) {
+  .user-details .user-header .user-header-info .user-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .user-details .user-header .user-header-info .user-avatar img {
+    width: 30px;
+  }
+}
 .user-details .user-header .user-header-info div:first-child {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-.user-details .user-header .user-header-info div:first-child p:first-child {
-  color: #213F7D;
-  font-size: 22px;
-  font-weight: 700px;
-  margin-bottom: 8px;
-}
-.user-details .user-header .user-header-info div:first-child p:last-child {
-  font-size: 14px;
 }
 .user-details .user-header .user-header-info .user-tier {
   height: 100px;
@@ -108,6 +142,11 @@
   padding: 0 30px;
   border-left: 1px solid rgba(84, 95, 125, 0.4274509804);
   border-right: 1px solid rgba(84, 95, 125, 0.4274509804);
+}
+@media (max-width: 599px) {
+  .user-details .user-header .user-header-info .user-tier {
+    height: 70px;
+  }
 }
 .user-details .user-header .user-header-info .user-tier p {
   margin-bottom: 8px;
@@ -119,13 +158,41 @@
 }
 .user-details .user-header .user-header-info div:last-child {
   color: #213F7D;
-  word-wrap: break-word;
 }
 .user-details .user-header .user-header-info div:last-child p:first-child {
   font-size: 22px;
   font-weight: 700px;
   margin-bottom: 8px;
 }
+@media (max-width: 599px) {
+  .user-details .user-header .user-header-info div:last-child p:first-child {
+    font-size: 16px;
+  }
+}
 .user-details .user-header .user-header-info div:last-child p:last-child {
   font-size: 14px;
+}
+.user-details .user-header .user-header-nav {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.user-details .user-header .user-header-nav a {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+@media (max-width: 599px) {
+  .user-details .user-header .user-header-nav a {
+    font-size: 14px;
+  }
+}
+.user-details .user-header .user-header-nav a:first-child {
+  border-bottom: 3px solid #39CDCC;
+  color: #39CDCC;
 }/*# sourceMappingURL=user-details.css.map */

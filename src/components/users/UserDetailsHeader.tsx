@@ -1,4 +1,7 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
+
+const userNavItems: String[] = ['General Details', 'Documents', 'Bank Details', 'Loans', 'Savings', 'App and System'];
 
 interface Props {}
 
@@ -16,7 +19,7 @@ const UserDetailsHeader: FC<Props> = () => {
 					</div>
 				</div>
 
-				<div className='user-tier'>
+				<div className="user-tier">
 					<p>User’s Tier</p>
 					<div className="star-rating">
 						<img src="/images/icons/star-filled.svg" alt="star" />
@@ -30,7 +33,15 @@ const UserDetailsHeader: FC<Props> = () => {
 					<p>9912345678/Providus Bank</p>
 				</div>
 			</div>
-			<div></div>
+			<div className="user-header-nav">
+				{userNavItems.map((item, index) => {
+					return (
+						<Link to="#">
+							<div>{item}</div>
+						</Link>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
