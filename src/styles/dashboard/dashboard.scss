@@ -21,6 +21,9 @@
 		max-width: 1200px;
 		margin: 0px auto;
 		overflow-y: auto;
+		@include breakpointMobile {
+			padding: 120px 20px 40px 20px;
+		}
 	}
 }
 

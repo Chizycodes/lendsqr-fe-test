@@ -9,34 +9,59 @@
 		margin-bottom: 30px;
 	}
 	.users-stats {
-		display: flex;
-		flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        justify-content: space-between;
 		width: 100%;
 		gap: 30px;
 		margin-bottom: 30px;
+        @include breakpointMobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 	}
 	.users-stats-box {
 		background-color: #ffffff;
 		border: 1px solid rgba(33, 63, 125, 0.06);
 		box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
 		border-radius: 4px;
-		width: 240px;
+		width: 100%;
 		padding: 20px 30px 30px;
-		gap: 12px;
+        @include breakpointTabletLg {
+            width: 100%;
+            padding: 20px;
+        }
 		img {
 			margin-bottom: 12px;
+            @include breakpointTabletLg {
+                width: 30px;
+                margin-bottom: 8px;
+            }
 		}
 		p {
 			font-size: 14px;
 			font-weight: 500;
 			color: $textPrimary;
 			text-transform: uppercase;
+            @include breakpointMobile {
+                font-size: 12px;
+            }
 		}
 		p:last-child {
 			font-size: 24px;
 			font-weight: 600;
 			color: $bluePrimary;
 			margin-top: 12px;
+            @include breakpointTabletLg {
+                font-size: 20px;
+                margin-top: 8px;
+            }
+            @include breakpointMobile {
+                font-size: 16px;
+                margin-top: 8px;
+            }
 		}
 	}
 }
@@ -62,16 +87,19 @@
 					font-size: 12px;
 					font-weight: 600;
 					text-transform: uppercase;
-					padding: 20px 0;
+					padding: 20px 20px 20px 0px;
 					text-align: left;
-					min-width: 200px;
+					max-width: 200px;
+                    word-wrap: break-word;
+                    @include breakpointMobile {
+                        max-width: 150px;
+                    }
 					div {
 						display: flex;
 						align-items: center;
-						gap: 10px;
+						gap: 5px;
 						img {
-							// width: 16px;
-							// height: 10.6px;
+							
 							cursor: pointer;
 						}
 					}
@@ -86,9 +114,14 @@
 				td {
 					font-size: 14px;
 					font-weight: 400;
-					padding: 20px 0;
+                    max-width: 200px;
+					padding: 20px 20px 20px 0;
 					text-transform: capitalize;
 					border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+                    word-wrap: break-word;
+                    @include breakpointMobile {
+                            max-width: 150px;
+                    }
 				}
 			}
 		}
@@ -101,6 +134,23 @@
 	margin-top: 23px;
 	color: $textPrimary;
 	font-size: 14px;
+    @include breakpointMobile {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .user-page-info {
+        span {
+            padding: 7px 10px;
+            color: $bluePrimary;
+            font-weight: 500;
+            background-color: rgba(33, 63, 125, 0.1);
+            border-radius: 4px;
+            img {
+                margin-left: 10px;
+            }
+        }
+    }
 
 	.pagination {
         font-size: 16px;

@@ -8,12 +8,10 @@ import ReactPaginate from 'react-paginate';
 const Users = () => {
 	const [loading, setLoading] = useState(false);
 	const [users, setUsers] = useState([]);
+	const [currentItems, setCurrentItems] = useState([]);
+	const [pageCount, setPageCount] = useState(0);
 	const [itemOffset, setItemOffset] = useState(0);
 	const itemsPerPage = 10;
-
-	const endOffset = itemOffset + itemsPerPage;
-	const currentItems = users.slice(itemOffset, endOffset);
-	const pageCount = Math.ceil(users.length / itemsPerPage);
 
 	// Invoke when user click to request another page.
 	const handlePageClick = (event: any) => {
@@ -42,6 +40,12 @@ const Users = () => {
 		fetchUsers();
 	}, []);
 
+	useEffect(() => {
+		const endOffset = itemOffset + itemsPerPage;
+		setCurrentItems(users?.slice(itemOffset, endOffset));
+		setPageCount(Math.ceil(users?.length / itemsPerPage));
+	}, [itemOffset, itemsPerPage, users]);
+
 	return (
 		<section className="users">
 			<h1>Users</h1>
@@ -49,9 +53,15 @@ const Users = () => {
 				<UsersStats />
 				<UsersTable users={currentItems} />
 				<div className="users-paginate">
-          <div className='user-page-info'>
-            <p>Showing {itemOffset + 10} out of {users.length}</p>
-          </div>
+					<div className="user-page-info">
+						<p>
+							Showing{' '}
+							<span>
+								{itemOffset + 10} <img src="/images/icons/down-arrow.svg" alt="down arrow" />
+							</span>{' '}
+							out of {users.length}
+						</p>
+					</div>
 					<ReactPaginate
 						nextLabel=">"
 						onPageChange={handlePageClick}

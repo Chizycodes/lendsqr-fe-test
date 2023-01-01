@@ -32,6 +32,11 @@
   margin: 0px auto;
   overflow-y: auto;
 }
+@media (max-width: 599px) {
+  .dashboard-layout .dashboard-main {
+    padding: 120px 20px 40px 20px;
+  }
+}
 
 .top-nav {
   background-color: #ffffff;

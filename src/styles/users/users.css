@@ -17,23 +17,43 @@
   margin-bottom: 30px;
 }
 .users .users-stats {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: space-between;
   width: 100%;
   gap: 30px;
   margin-bottom: 30px;
+}
+@media (max-width: 599px) {
+  .users .users-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
 }
 .users .users-stats-box {
   background-color: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  width: 240px;
+  width: 100%;
   padding: 20px 30px 30px;
-  gap: 12px;
+}
+@media (max-width: 900px) {
+  .users .users-stats-box {
+    width: 100%;
+    padding: 20px;
+  }
 }
 .users .users-stats-box img {
   margin-bottom: 12px;
+}
+@media (max-width: 900px) {
+  .users .users-stats-box img {
+    width: 30px;
+    margin-bottom: 8px;
+  }
 }
 .users .users-stats-box p {
   font-size: 14px;
@@ -41,11 +61,28 @@
   color: #545F7D;
   text-transform: uppercase;
 }
+@media (max-width: 599px) {
+  .users .users-stats-box p {
+    font-size: 12px;
+  }
+}
 .users .users-stats-box p:last-child {
   font-size: 24px;
   font-weight: 600;
   color: #213F7D;
   margin-top: 12px;
+}
+@media (max-width: 900px) {
+  .users .users-stats-box p:last-child {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 599px) {
+  .users .users-stats-box p:last-child {
+    font-size: 16px;
+    margin-top: 8px;
+  }
 }
 
 .users-table {
@@ -68,14 +105,20 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 20px 20px 20px 0px;
   text-align: left;
-  min-width: 200px;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+@media (max-width: 599px) {
+  .users-table table thead tr th {
+    max-width: 150px;
+  }
 }
 .users-table table thead tr th div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 .users-table table thead tr th div img {
   cursor: pointer;
@@ -86,9 +129,16 @@
 .users-table table tbody tr td {
   font-size: 14px;
   font-weight: 400;
-  padding: 20px 0;
+  max-width: 200px;
+  padding: 20px 20px 20px 0;
   text-transform: capitalize;
   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  word-wrap: break-word;
+}
+@media (max-width: 599px) {
+  .users-table table tbody tr td {
+    max-width: 150px;
+  }
 }
 
 .users-paginate {
@@ -97,6 +147,23 @@
   margin-top: 23px;
   color: #545F7D;
   font-size: 14px;
+}
+@media (max-width: 599px) {
+  .users-paginate {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+.users-paginate .user-page-info span {
+  padding: 7px 10px;
+  color: #213F7D;
+  font-weight: 500;
+  background-color: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
+}
+.users-paginate .user-page-info span img {
+  margin-left: 10px;
 }
 .users-paginate .pagination {
   font-size: 16px;
