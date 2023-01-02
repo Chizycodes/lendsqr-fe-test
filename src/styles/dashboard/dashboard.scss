@@ -16,10 +16,14 @@
 		}
 	}
 	.dashboard-main {
-		padding: 140px 40px 40px 40px;
 		width: 100%;
 		max-width: 1200px;
 		margin: 0px auto;
+	}
+	.dashboard {
+		padding: 140px 40px 40px 40px;
+		width: 100%;
+		
 		overflow-y: auto;
 		@include breakpointMobile {
 			padding: 120px 20px 40px 20px;
@@ -38,6 +42,9 @@
 	width: 100%;
 	z-index: 1030;
 	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+	@include breakpointDesktop {
+		height: 70px;
+	}
 
 	.search-input {
 		width: 400px;
@@ -84,9 +91,14 @@
 	}
 	.menu-icon {
 		display: none;
+		img {
+			width: 30px;
+			height: 30px;
+		}
 		@include breakpointDesktop {
 			display: block;
 			cursor: pointer;
+			z-index: 2400;
 		}
 	}
 }
@@ -119,7 +131,7 @@
 	font-family: $workSans;
 	background-color: #ffffff;
 	height: 100vh;
-	width: 283px;
+	width: 320px;
 	position: relative;
 	z-index: 1020;
 	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
@@ -129,7 +141,8 @@
 	scrollbar-width: 5px;
 	@include breakpointDesktop {
 		position: fixed;
-		left: -300px;
+		width: 262px;
+		left: -270px;
 		z-index: 1030;
 		transition: all 0.5s;
 		-webkit-transition: all 0.5s;
@@ -144,8 +157,11 @@
 		padding-left: 35px;
 		display: flex;
 		align-items: center;
+		@include breakpointDesktop {
+			height: 70px;
+		}
 		img {
-			width: 125px;
+			width: 110px;
 		}
 	}
 	.side-nav-menu {

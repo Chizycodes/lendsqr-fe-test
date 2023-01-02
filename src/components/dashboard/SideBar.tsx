@@ -23,6 +23,9 @@ const SideBar: FC<Props> = ({ setIsMenuOpen, isMenuOpen }) => {
 		<div className={`side-nav ${isMenuOpen && 'nav-active'}`}>
 			<div className="side-nav-header">
 				<img src="/images/logo.svg" alt="logo" className="logo" />
+				{/* <div onClick={() => setIsMenuOpen(false)} className="menu-icon">
+					<img src={`/images/icons/close-icon.svg`} alt="menu icon" />
+				</div> */}
 			</div>
 			<div className="">
 				<ul className="side-nav-menu">

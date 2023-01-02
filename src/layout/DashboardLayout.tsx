@@ -14,8 +14,8 @@ const DashboardLayout: FC<Props> = () => {
 			<div className='dashboard-container'>
 				<SideBar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
 
-				<div className="dashboard-main">
-					<div>
+				<div className="dashboard">
+					<div className='dashboard-main'>
 						<Outlet />
 					</div>
 				</div>
