@@ -193,4 +193,21 @@
 			text-transform: uppercase;
 		}
 	}
+	.logout {
+		border-top: 1px solid #21407d5a;
+		padding: 10px 30px;
+		cursor: pointer;
+		color: $bluePrimary;
+		font-size: 16px;
+		div {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+
+		.version {
+			font-size: 12px;
+		}
+	}
 }

@@ -14,7 +14,7 @@ export const navItems = [
 	{
 		title: 'Customers',
 		header: true,
-		link: "",
+		link: '',
 		id: 3,
 	},
 	{
@@ -68,7 +68,7 @@ export const navItems = [
 	{
 		title: 'Businesses',
 		header: true,
-		link: "",
+		link: '',
 		id: 12,
 	},
 	{
@@ -83,7 +83,7 @@ export const navItems = [
 		link: '#',
 		id: 14,
 	},
-    	{
+	{
 		title: 'Savings Products',
 		icon: '/images/icons/nav-icon-15.svg',
 		link: '#',
@@ -95,7 +95,7 @@ export const navItems = [
 		link: '#',
 		id: 16,
 	},
-    {
+	{
 		title: 'Transactions',
 		icon: '/images/icons/nav-icon-17.svg',
 		link: '#',
@@ -107,7 +107,7 @@ export const navItems = [
 		link: '#',
 		id: 18,
 	},
-    	{
+	{
 		title: 'Service Account',
 		icon: '/images/icons/nav-icon-19.svg',
 		link: '#',
@@ -119,19 +119,19 @@ export const navItems = [
 		link: '#',
 		id: 20,
 	},
-    {
+	{
 		title: 'Reports',
 		icon: '/images/icons/nav-icon-21.svg',
 		link: '#',
 		id: 21,
 	},
-    {
+	{
 		title: 'Settings',
 		header: true,
-		link: "",
+		link: '',
 		id: 22,
 	},
-    {
+	{
 		title: 'Preferences',
 		icon: '/images/icons/nav-icon-23.svg',
 		link: '#',
@@ -143,11 +143,17 @@ export const navItems = [
 		link: '#',
 		id: 24,
 	},
-    {
+	{
 		title: 'Audit Logs',
 		icon: '/images/icons/nav-icon-25.svg',
 		link: '#',
 		id: 25,
+	},
+	{
+		title: 'Systems Messages',
+		icon: '/images/icons/nav-icon-26.svg',
+		link: '#',
+		id: 26,
 	},
 ];
 
