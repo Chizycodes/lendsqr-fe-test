@@ -143,6 +143,12 @@
   border-bottom: 1px solid rgba(33, 63, 125, 0.1);
   word-wrap: break-word;
 }
+.users-table table tbody tr td:last-child {
+  position: relative;
+}
+.users-table table tbody tr td:last-child img {
+  cursor: pointer;
+}
 @media (max-width: 599px) {
   .users-table table tbody tr td {
     max-width: 150px;
@@ -269,4 +275,28 @@
   border: 1px solid #545f7d;
   background-color: #ffffff;
   color: #545f7d;
+}
+
+.options-dropdown {
+  width: 180px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 10px 20px;
+  z-index: 20;
+}
+.options-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  color: #545f7d;
+  cursor: pointer;
+  padding: 10px 0;
 }/*# sourceMappingURL=users.css.map */

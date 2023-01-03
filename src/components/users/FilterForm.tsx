@@ -15,7 +15,7 @@ const FilterForm: FC<Props> = () => {
 
 	const onSubmit = (data: any) => {
 		if (data) {
-			console.log(data);
+			// console.log(data);
 		}
 	};
 	return (

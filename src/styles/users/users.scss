@@ -126,6 +126,12 @@
 					text-transform: capitalize;
 					border-bottom: 1px solid rgba(33, 63, 125, 0.1);
 					word-wrap: break-word;
+					&:last-child {
+						position: relative;
+						img {
+							cursor: pointer;
+						}
+					}
 					@include breakpointMobile {
 						max-width: 150px;
 					}
@@ -247,5 +253,29 @@
 				}
 			}
 		}
+	}
+}
+
+.options-dropdown {
+	width: 180px;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	background: #ffffff;
+	border: 1px solid rgba(84, 95, 125, 0.04);
+	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	padding: 10px 20px;
+	z-index: 20;
+	li {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 14px;
+		font-weight: 400;
+		list-style: none;
+		color: $textPrimary;
+		cursor: pointer;
+		padding: 10px 0;
 	}
 }

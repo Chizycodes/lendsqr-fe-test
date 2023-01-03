@@ -4,6 +4,7 @@ import { UserModel } from '../../utils/models';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import FilterForm from './FilterForm';
+import MoreDropDown from './MoreDropDown';
 
 interface Props {
 	users: UserModel[];
@@ -14,7 +15,8 @@ const tableHeaders = ['Organization', 'Username', 'Email', 'Phone number', 'Date
 
 const UsersTable: FC<Props> = ({ users, loading }) => {
 	const [isFilterOpen, setIsFilterOpen] = useState<null | Number>(null);
-	console.log(isFilterOpen);
+	const [isOptionsOpen, setIsOptionsOpen] = useState<null | Number>(null);
+	
 	return (
 		<div className="users-table">
 			<table>
@@ -55,7 +57,13 @@ const UsersTable: FC<Props> = ({ users, loading }) => {
 									<span className="status active"> Active</span>
 								</td>
 								<td>
-									<img src="/images/icons/more-icon.svg" alt="more" />
+									<img
+										src="/images/icons/more-icon.svg"
+										alt="more"
+										onClick={() => (isOptionsOpen === index ? setIsOptionsOpen(null) : setIsOptionsOpen(index))}
+									/>
+
+									{isOptionsOpen === index ? <MoreDropDown /> : ''}
 								</td>
 							</tr>
 						);
