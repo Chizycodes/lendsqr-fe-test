@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import UserDetailsHeader from '../../components/users/UserDetailsHeader';
 import UserDetailsMain from '../../components/users/UserDetailsMain';
-import '../../styles/user-details/user-details.css';
+import '../../styles/user-details.scss';
 import Loader from '../../components/general/Loader';
 
 interface Props {}

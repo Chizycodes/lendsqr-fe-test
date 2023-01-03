@@ -1,4 +1,4 @@
-import '../../styles/users/users.css';
+import '../../styles/users.scss';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import UsersStats from '../../components/users/UsersStats';

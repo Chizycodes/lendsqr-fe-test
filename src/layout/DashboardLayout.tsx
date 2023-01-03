@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import SideBar from '../components/dashboard/SideBar';
 import TopNav from '../components/dashboard/TopNav';
-import '../styles/dashboard/dashboard.css';
+import '../styles/dashboard.scss';
 
 interface Props {}
 

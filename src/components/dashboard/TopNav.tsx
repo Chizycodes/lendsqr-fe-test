@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import '../../styles/dashboard/dashboard.css';
 import { Link } from 'react-router-dom';
 
 interface Props {
