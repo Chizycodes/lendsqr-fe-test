@@ -38,7 +38,7 @@ const UserDetailsHeader: FC<Props> = ({user}) => {
 			<div className="user-header-nav">
 				{userNavItems.map((item, index) => {
 					return (
-						<Link to="#">
+						<Link key={index} to="#">
 							<div>{item}</div>
 						</Link>
 					);
