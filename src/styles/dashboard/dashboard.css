@@ -35,9 +35,9 @@
   width: 100%;
   overflow-y: auto;
 }
-@media (max-width: 599px) {
+@media (max-width: 1024px) {
   .dashboard-layout .dashboard {
-    padding: 120px 20px 40px 20px;
+    padding: 100px 20px 40px 20px;
   }
 }
 
@@ -163,7 +163,7 @@
   font-family: "Work Sans", sans-serif;
   background-color: #ffffff;
   height: 100vh;
-  width: 320px;
+  width: 370px;
   position: relative;
   z-index: 1020;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);

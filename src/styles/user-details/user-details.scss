@@ -172,6 +172,9 @@
 
 		.user-info-card {
             border-bottom: 1px solid #21407d5a;
+			&:last-child {
+				border-bottom: none;
+			}
             padding-bottom: 30px;
             margin-bottom: 30px;
 			h2 {

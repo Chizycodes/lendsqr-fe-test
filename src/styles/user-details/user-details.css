@@ -216,6 +216,9 @@
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
+.user-details .user-details-main .user-info-card:last-child {
+  border-bottom: none;
+}
 .user-details .user-details-main .user-info-card h2 {
   color: #213F7D;
   font-size: 16px;

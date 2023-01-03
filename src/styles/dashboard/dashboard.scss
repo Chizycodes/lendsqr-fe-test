@@ -23,10 +23,9 @@
 	.dashboard {
 		padding: 140px 40px 40px 40px;
 		width: 100%;
-		
 		overflow-y: auto;
-		@include breakpointMobile {
-			padding: 120px 20px 40px 20px;
+		@include breakpointDesktop {
+			padding: 100px 20px 40px 20px;
 		}
 	}
 }
@@ -131,7 +130,7 @@
 	font-family: $workSans;
 	background-color: #ffffff;
 	height: 100vh;
-	width: 320px;
+	width: 370px;
 	position: relative;
 	z-index: 1020;
 	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);

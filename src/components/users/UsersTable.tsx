@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
+import { useState } from 'react';
 import { UserModel } from '../../utils/models';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import FilterForm from './FilterForm';
 
 interface Props {
 	users: UserModel[];
@@ -11,6 +13,8 @@ interface Props {
 const tableHeaders = ['Organization', 'Username', 'Email', 'Phone number', 'Date joined', 'Status', ''];
 
 const UsersTable: FC<Props> = ({ users, loading }) => {
+	const [isFilterOpen, setIsFilterOpen] = useState<null | Number>(null);
+	console.log(isFilterOpen);
 	return (
 		<div className="users-table">
 			<table>
@@ -21,8 +25,15 @@ const UsersTable: FC<Props> = ({ users, loading }) => {
 								<th key={index}>
 									<div>
 										<span>{header}</span>
-										{header && <img src="/images/icons/filter-icon.svg" alt="filter-icon" />}
+										{header && (
+											<img
+												src="/images/icons/filter-icon.svg"
+												alt="filter-icon"
+												onClick={() => (isFilterOpen === index ? setIsFilterOpen(null) : setIsFilterOpen(index))}
+											/>
+										)}
 									</div>
+									{isFilterOpen === index ? <FilterForm /> : ''}
 								</th>
 							);
 						})}

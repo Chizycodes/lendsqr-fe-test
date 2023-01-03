@@ -11,7 +11,7 @@
   font-family: "Work Sans", sans-serif;
 }
 .users h1 {
-  color: #213F7D;
+  color: #213f7d;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 30px;
@@ -58,7 +58,7 @@
 .users .users-stats-box p {
   font-size: 14px;
   font-weight: 500;
-  color: #545F7D;
+  color: #545f7d;
   text-transform: uppercase;
 }
 @media (max-width: 599px) {
@@ -69,7 +69,7 @@
 .users .users-stats-box p:last-child {
   font-size: 24px;
   font-weight: 600;
-  color: #213F7D;
+  color: #213f7d;
   margin-top: 12px;
 }
 @media (max-width: 900px) {
@@ -98,10 +98,11 @@
 .users-table table {
   width: 100%;
   border-collapse: collapse;
-  color: #545F7D;
+  color: #545f7d;
   overflow-x: auto;
 }
 .users-table table thead tr th {
+  position: relative;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -128,7 +129,7 @@
 }
 .users-table table tbody tr .status.active {
   padding: 6px 10px;
-  color: #39CD62;
+  color: #39cd62;
   background-color: rgba(57, 205, 99, 0.231372549);
   border-radius: 100px;
   font-size: 14px;
@@ -148,7 +149,7 @@
   }
 }
 .users-table table tbody tr a {
-  color: #545F7D;
+  color: #545f7d;
   text-decoration: none;
 }
 .users-table table tbody tr a:hover {
@@ -159,7 +160,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 23px;
-  color: #545F7D;
+  color: #545f7d;
   font-size: 14px;
 }
 @media (max-width: 599px) {
@@ -171,7 +172,7 @@
 }
 .users-paginate .user-page-info span {
   padding: 7px 10px;
-  color: #213F7D;
+  color: #213f7d;
   font-weight: 500;
   background-color: rgba(33, 63, 125, 0.1);
   border-radius: 4px;
@@ -187,7 +188,7 @@
   list-style: none;
 }
 .users-paginate .pagination .active {
-  color: #213F7D;
+  color: #213f7d;
   font-weight: 500;
 }
 .users-paginate .pagination .page-link {
@@ -202,4 +203,70 @@
   justify-content: center;
   background: rgba(33, 63, 125, 0.1);
   border-radius: 4px;
+}
+
+.filter-form {
+  width: 270px;
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px 20px;
+  position: absolute;
+  top: 60px;
+  z-index: 20;
+  color: #545f7d;
+}
+.filter-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.filter-form .form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.filter-form .form-group input,
+.filter-form .form-group select {
+  width: 100%;
+  background-color: #ffffff;
+  height: 40px;
+  border: 1px solid #213f7d;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #545f7d;
+}
+.filter-form .form-group input:focus,
+.filter-form .form-group select:focus {
+  outline: none;
+}
+.filter-form div:last-child {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.filter-form div:last-child button {
+  background-color: #39cdcc;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-family: "Avenir next", sans-serif;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+.filter-form div:last-child button:first-child {
+  margin-right: 10px;
+  border: 1px solid #545f7d;
+  background-color: #ffffff;
+  color: #545f7d;
 }/*# sourceMappingURL=users.css.map */
