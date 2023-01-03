@@ -1,5 +1,11 @@
 # LENDSQR FRONTEND ENGINEERING ASSESSMENT
 
+## About Lendsqr
+
+A Lending-as-a-Service Solution which powers lenders to build, launch, and scale their digital lending business across multiple channels, at the lowest cost.
+
+We provide our lenders from various industries with a cloud lending platform to make the activities of your LaaS business run smoothly by implementing novel solutions and superior domain expertise. We’re passionate about making lenders succeed.
+
 ## Requirements
 
 For development, you will only need Node.js installed on your environement.
@@ -7,41 +13,6 @@ For development, you will only need Node.js installed on your environement.
 ### Node
 
 [Node](http://nodejs.org/) is really easy to install & now include [NPM](https://npmjs.org/).
-You should be able to run the following command after the installation procedure
-below.
-
-    $ node --version
-    v0.10.24
-
-    $ npm --version
-    1.3.21
-
-#### Node installation on OS X
-
-You will need to use a Terminal. On OS X, you can find the default terminal in
-`/Applications/Utilities/Terminal.app`.
-
-Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
-
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-If everything when fine, you should run
-
-    brew install node
-
-#### Node installation on Linux
-
-    sudo apt-get install python-software-properties
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get update
-    sudo apt-get install nodejs
-
-#### Node installation on Windows
-
-Just go on [official Node.js website](http://nodejs.org/) & grab the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it.
-
----
 
 ## Install
 
@@ -52,36 +23,20 @@ Also, be sure to have `git` available in your PATH, `npm` might need it.
 ## Start & watch
 
     $ npm start
-
+To start project in development mode 
 ## Simple build for production
 
     $ npm run build
 
-## Update sources
+## Run tests
 
-Some packages usages might change so you should run `npm prune` & `npm install` often.
-A common way to update is by doing
-
-    $ git pull
-    $ npm prune
-    $ npm install
-
-To run those 3 commands you can just do
-
-    $ npm run pull
-
----
+    $ npm test
 
 ## Languages & tools
 
-### HTML
+### React
 
-### JavaScript
+### TypeScript
+### SCSS
 
-- [JSLint](http://www.jslint.com/docs/) is used to prevent JavaScript error.
-- [Browserify](http://browserify.org/) to handle allow us to write our client-side scripts with [es6 syntax](http://es6.github.io/) thanks to [es6ify](https://github.com/thlorenz/es6ify).
-- [React](http://facebook.github.io/react) is used for UI.
-
-### CSS
-
-- [SCSS](https://sass-lang.com/) is used to write futureproof CSS for CSS vendor prefix under the hood).
+### Jest
