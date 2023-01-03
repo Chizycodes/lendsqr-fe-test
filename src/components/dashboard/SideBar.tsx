@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { navItems } from '../../utils/data';
+import { navItems } from '../../core/data';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Props {

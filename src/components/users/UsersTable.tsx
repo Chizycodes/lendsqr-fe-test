@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useState } from 'react';
-import { UserModel } from '../../utils/models';
+import { UserModel } from '../../core/models';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import FilterForm from './FilterForm';
@@ -16,9 +16,9 @@ const tableHeaders = ['Organization', 'Username', 'Email', 'Phone number', 'Date
 const UsersTable: FC<Props> = ({ users, loading }) => {
 	const [isFilterOpen, setIsFilterOpen] = useState<null | Number>(null);
 	const [isOptionsOpen, setIsOptionsOpen] = useState<null | Number>(null);
-	
+
 	return (
-		<div className="users-table">
+		<div data-testid="user-table" className="users-table">
 			<table>
 				<thead>
 					<tr>

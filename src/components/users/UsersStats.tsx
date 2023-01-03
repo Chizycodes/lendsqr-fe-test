@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { usersStats } from '../../utils/data';
+import { usersStats } from '../../core/data';
 
 interface Props {}
 
 const UsersStats: FC<Props> = () => {
 	return (
-		<div className="users-stats">
+		<div data-testid="users-stats" className="users-stats">
 			{usersStats.map((item, index) => {
 				return (
 					<div key={index} className="users-stats-box">
