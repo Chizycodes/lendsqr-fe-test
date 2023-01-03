@@ -4,11 +4,12 @@ import axios from 'axios';
 import UserDetailsHeader from '../../components/users/UserDetailsHeader';
 import UserDetailsMain from '../../components/users/UserDetailsMain';
 import '../../styles/user-details/user-details.css';
+import Loader from '../../components/general/Loader';
 
 interface Props {}
 
 const UserDetail: FC<Props> = () => {
-	const [loading, setLoading] = useState<Boolean>();
+	const [loading, setLoading] = useState<Boolean>(true);
 	const [user, setUser] = useState([]);
 	const { id } = useParams();
 
@@ -42,10 +43,14 @@ const UserDetail: FC<Props> = () => {
 					<button type="button">ACTIVATE USER</button>
 				</div>
 			</div>
-			<div>
-				<UserDetailsHeader user={user} />
-				<UserDetailsMain user={user} />
-			</div>
+			{loading ? (
+				<Loader />
+			) : (
+				<div>
+					<UserDetailsHeader user={user} />
+					<UserDetailsMain user={user} />
+				</div>
+			)}
 		</section>
 	);
 };

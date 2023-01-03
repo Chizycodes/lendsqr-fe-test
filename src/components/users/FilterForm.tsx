@@ -34,6 +34,7 @@ const FilterForm: FC<Props> = () => {
 				<label htmlFor="username">Username</label>
 				<input
 					type="text"
+                    placeholder='User'
 					{...register('username', {
 						required: false,
 					})}
@@ -43,6 +44,7 @@ const FilterForm: FC<Props> = () => {
 				<label htmlFor="email">Email</label>
 				<input
 					type="email"
+                    placeholder='Email'
 					{...register('email', {
 						required: false,
 					})}
@@ -52,6 +54,7 @@ const FilterForm: FC<Props> = () => {
 				<label htmlFor="date">Date</label>
 				<input
 					type="date"
+                    placeholder='Date'
 					{...register('date', {
 						required: false,
 					})}
@@ -61,6 +64,7 @@ const FilterForm: FC<Props> = () => {
 				<label htmlFor="phone">Phone Number</label>
 				<input
 					type="tel"
+                    placeholder='Phone Number'
 					{...register('phone', {
 						required: false,
 					})}
